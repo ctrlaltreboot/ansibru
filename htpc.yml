@@ -1,0 +1,9 @@
+---
+- hosts: localhost
+  gather_facts: true
+  become: true
+
+  roles:
+    - { role: xyzrbt.couchpotato, tags: ['cp'] }
+    - { role: xyzrbt.sickrage, tags: ['sr'] }
+    - { role: xyzrbt.headphones, tags: ['hp'] }
